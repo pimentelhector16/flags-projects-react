@@ -60,6 +60,7 @@ const filterByRegionAction = (regionSelected) => {
 export const Region = () => {
     const dispatch = useDispatch();
     const [dropdown, setdropdown] = useState(false)
+    // eslint-disable-next-line no-unused-vars
     const filterByRegion = useSelector((state) => state.filterByRegion);
 
     const onRegionChange = (selectEvent) => {

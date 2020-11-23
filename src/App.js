@@ -20,6 +20,7 @@ const store = createStore(reducer, initialState)
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [checked, setChecked] = useState(false)
   const mainClass = darkMode ? 'is-dark-mode' : 'is-light-mode'
 
