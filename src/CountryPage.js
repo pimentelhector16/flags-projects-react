@@ -29,11 +29,12 @@ function CountryPage({ match, history }) {
   let DBcountry = useSelector(state => state.countryList.find(item => item.alpha2Code === match.params.id))
   const [country, setCountry] = useState(DBcountry)
   useEffect(() => {
-
+    console.log(match.params.id.toLowerCase())
     if (!country) {
-      fetch(`https://restcountries.eu/rest/v2/all/${match.params.id.toLowerCase()}`)
+      fetch(`https://restcountries.eu/rest/v2/alpha/${match.params.id.toLowerCase()}`)
         .then((response) => response.json())
         .then((data) => {
+          console.log(data)
           setCountry(data)
         })
     }
