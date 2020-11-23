@@ -47,7 +47,7 @@ function CountryList() {
         <Wrapper>
             <CountryListStyled>
                 {
-                    countryList.map(({ name, flag, population, region, capital }) => {
+                    countryList.map(({ name, flag, population, capital, region, nativeName, cioc, alpha2Code }) => {
                         return (
                             <Country
                                 flag={flag}
@@ -56,6 +56,9 @@ function CountryList() {
                                 population={population}
                                 region={region}
                                 capital={capital}
+                                nativeName={nativeName}
+                                cioc={cioc}
+                                alpha2Code={alpha2Code}
                             />
                         )
                     })

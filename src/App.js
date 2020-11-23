@@ -46,7 +46,7 @@ function App() {
         <Router>
           <Header setDarkMode={setDarkMode} darkMode={darkMode} />
           <Switch>
-            <Route path="/country/:id" component={CountryPage} />
+            <Route path="/Country/:id" component={CountryPage} />
             <Route path="/">
               <ActionList />
               <CountryList />
